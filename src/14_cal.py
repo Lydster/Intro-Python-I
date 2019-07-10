@@ -22,3 +22,19 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+now = datetime.now()
+month = now.month
+year = now.year
+
+
+month_input = input('enter numerical month: ')
+year_input = input('enter a numerical year: ')
+calendar.setfirstweekday(6)
+
+print(month)
+
+if month_input != '' and year_input != '':
+    print(calendar.month(year_input, month_input))
+else:
+    print(calendar.prmonth(year, month))
